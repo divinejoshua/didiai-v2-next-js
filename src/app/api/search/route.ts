@@ -1,17 +1,12 @@
-import { BING_SEARCH_API_KEY, GROQ_API_KEY } from "@/app/constants/api.constants";
+import { BING_SEARCH_API_KEY, BING_SEARCH_URL, GROQ_API_KEY } from "@/app/constants/api.constants";
 import { NextRequest, NextResponse } from "next/server";
+import axios from 'axios';
 
 // GROQ
 const Groq = require("groq-sdk");
 const groq = new Groq({
     apiKey: GROQ_API_KEY
 });
-
-//BING
-const bing_api_key = BING_SEARCH_API_KEY
-const BING_SEARCH_V7_ENDPOINT =  os.environ['BING_SEARCH_V7_ENDPOINT'] +"v7.0/search"
-
-
 
 // POST request
 export async function POST (req: NextRequest, res : NextResponse) {
@@ -24,7 +19,10 @@ export async function POST (req: NextRequest, res : NextResponse) {
     //LLM handler
     let llmResponse = await LLMHandler(searchQuery)
 
-    let data = { message: llmResponse }
+    //SEO handler
+    let seoResponse = await SEOHandler(searchQuery)
+
+    let data = { message: seoResponse }
 
     //Response
     return NextResponse.json(data, {
@@ -32,8 +30,26 @@ export async function POST (req: NextRequest, res : NextResponse) {
     });
   }
 
+//SEO Handler
+async function SEOHandler(searchQuery : string | null) {
+    let mkt = 'en-US'
+    let params = {'q': searchQuery, 'mkt': mkt}
+    let headers = {'Ocp-Apim-Subscription-Key': BING_SEARCH_API_KEY}
 
-//SEO Handler 
+    let response = null
+
+    // Call the SEO API
+   await axios.get(BING_SEARCH_URL, {
+        params: params,
+        headers: headers
+    })
+    .then((res) => {
+        response = res.data
+    })
+    .catch((err) => console.error(err));
+
+    return response
+}
 
 // LLM Handler
 async function LLMHandler(searchQuery : string | null) {
@@ -50,3 +66,5 @@ async function LLMHandler(searchQuery : string | null) {
     let response = completion.choices[0]?.message?.content || ""
     return response
 }
+
+
