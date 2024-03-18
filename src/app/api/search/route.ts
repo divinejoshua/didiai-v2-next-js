@@ -1,14 +1,15 @@
+import { BING_SEARCH_API_KEY, GROQ_API_KEY } from "@/app/constants/api.constants";
 import { NextRequest, NextResponse } from "next/server";
 
 // GROQ
 const Groq = require("groq-sdk");
 const groq = new Groq({
-    apiKey: process.env.GROQ_API_KEY
+    apiKey: GROQ_API_KEY
 });
 
 //BING
-const BING_SEARCH_API_KEY = process.env.GROQ_API_KEY
-// const BING_SEARCH_V7_ENDPOINT =  os.environ['BING_SEARCH_V7_ENDPOINT'] +"v7.0/search"
+const bing_api_key = BING_SEARCH_API_KEY
+const BING_SEARCH_V7_ENDPOINT =  os.environ['BING_SEARCH_V7_ENDPOINT'] +"v7.0/search"
 
 
 
