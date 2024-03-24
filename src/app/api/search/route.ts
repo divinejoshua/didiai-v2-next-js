@@ -25,7 +25,7 @@ export async function POST (req: NextRequest, res : NextResponse) {
     //LLM handler
     let llmResponse = await LLMHandler(searchQuery, searchContextFromSEO)
 
-
+    //Data response
     let data = {
         summary: llmResponse,
         seoResponse : seoResponse,
