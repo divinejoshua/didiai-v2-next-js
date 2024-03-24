@@ -25,12 +25,10 @@ export async function POST (req: NextRequest, res : NextResponse) {
     //LLM handler
     let llmResponse = await LLMHandler(searchQuery, searchContextFromSEO)
 
-    //SEO Data
-    let seoLinks = await getSEOLinks(seoResponse)
 
     let data = {
         message: llmResponse,
-        links : seoLinks,
+        seoResponse : seoResponse,
     }
 
     //Response
@@ -96,22 +94,4 @@ async function getSEOKeyDetails(seoResponse : any){
     const jsonString = JSON.stringify(filteredData);
 
     return jsonString;
-}
-
-// Get SEO Links
-async function getSEOLinks(seoResponse : any){
-    let serpResults : any = seoResponse.webPages.value
-
-    // Map through the array and extract only 'name' and 'snippet'
-    const filteredData = serpResults.map((item : any) => {
-    return {
-        name: item.name,
-        url: item.url,
-        snippet: item.snippet,
-        datePublished : item.datePublished,
-        dateLastCrawled : item.dateLastCrawled,
-    };
-    })
-
-    return filteredData;
 }
