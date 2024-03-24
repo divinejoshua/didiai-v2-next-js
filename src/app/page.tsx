@@ -1,8 +1,9 @@
-import Image from "next/image";
+import HeaderComponent from "./components/header";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="App mx-auto">
+      <HeaderComponent/>
     </main>
   );
 }
