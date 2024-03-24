@@ -27,7 +27,7 @@ export async function POST (req: NextRequest, res : NextResponse) {
 
 
     let data = {
-        message: llmResponse,
+        summary: llmResponse,
         seoResponse : seoResponse,
     }
 
