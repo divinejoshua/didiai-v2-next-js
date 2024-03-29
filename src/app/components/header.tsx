@@ -9,7 +9,7 @@ export default function HeaderComponent() {
     <header>
         {/* Navbar */}
         <nav className="nav-header font-bold pr-10">
-            <div className='nav-div pb-4'>
+            <div className='pb-4'>
                 <div className='flex float-left'>
                     <Image
                         src={headerLogo}

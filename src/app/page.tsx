@@ -2,6 +2,7 @@ import HeaderComponent from "./components/header";
 import Image from "next/image";
 import searchIconFlat from "./assets/icons/textarea-search-icon.svg"
 import searchIconFill from "./assets/icons/search-fill-icon.svg"
+import RecentSearch from "./components/recentSearch";
 
 export default function Home() {
   return (
@@ -11,12 +12,12 @@ export default function Home() {
       <HeaderComponent/>
 
       <section className="home-page-section mx-auto mt-32">
-        <p className="text-gray-500 leading-1">Home page of the internet</p>
+        <p className="text-gray-500 leading-1 text-sm">Home page of the internet</p>
 
         {/* Search box  */}
         <div className="relative">
           <textarea
-            className='w-full border rounded-lg px-11 py-3
+            className='w-full border rounded-lg px-11 py-4 text-sm
             focus:outline-none focus:border-blue-500
             focus:ring-blue-500
             focus:ring-1
@@ -42,6 +43,8 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Recent searches */}
+        <RecentSearch/>
       </section>
     </main>
   );
