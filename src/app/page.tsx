@@ -30,7 +30,7 @@ export default function Home() {
             <Image
               src={searchIconFlat}
               alt='Didi AI search'
-              height={20}
+              height={22}
               priority={true}
             />
           </div>

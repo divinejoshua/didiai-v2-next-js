@@ -4,9 +4,8 @@
 
 .App{
   max-width: 700px;
-  /* position: relative; */
+  position: relative;
   min-height: 80vh;
-  /* margin: 0; */
 }
 
 .nav-header{
@@ -40,6 +39,5 @@ footer {
   height: 60px; /* Height of the footer */
   width: 100%;
   max-width: 700px;
-  line-height: 60px;
   text-align: center;
 }
