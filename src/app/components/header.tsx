@@ -8,7 +8,7 @@ export default function HeaderComponent() {
   return (
     <header>
         {/* Navbar */}
-        <nav className="nav-header font-bold pl-5 pr-5">
+        <nav className="nav-header font-bold pr-10">
             <div className='nav-div pb-4'>
                 <div className='flex float-left'>
                     <Image

@@ -11,7 +11,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   z-index: 2;
   background-color: #fff;
   -webkit-backdrop-filter: blur(2px);
@@ -21,4 +21,12 @@
 
 .nav-div{
   border-bottom:1px solid #fafafa;
+}
+
+.home-page-section{
+  max-width: 500px;
+}
+
+.search-textarea {
+  resize: none;
 }
