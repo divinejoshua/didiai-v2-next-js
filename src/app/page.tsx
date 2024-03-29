@@ -2,7 +2,8 @@ import HeaderComponent from "./components/header";
 import Image from "next/image";
 import searchIconFlat from "./assets/icons/textarea-search-icon.svg"
 import searchIconFill from "./assets/icons/search-fill-icon.svg"
-import RecentSearch from "./components/recentSearch";
+import RecentSearchComponent from "./components/recentSearch";
+import FooterComponent from "./components/footer";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       {/* Header  */}
       <HeaderComponent/>
 
-      <section className="home-page-section mx-auto mt-32">
+      <section className="home-page-section page-section mx-auto mt-32">
         <p className="text-gray-500 leading-1 text-sm">Home page of the internet</p>
 
         {/* Search box  */}
@@ -44,8 +45,11 @@ export default function Home() {
         </div>
 
         {/* Recent searches */}
-        <RecentSearch/>
+        <RecentSearchComponent/>
       </section>
+
+      {/* Footer */}
+      <FooterComponent/>
     </main>
   );
 }

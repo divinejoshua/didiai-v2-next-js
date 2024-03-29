@@ -4,6 +4,9 @@
 
 .App{
   max-width: 700px;
+  /* position: relative; */
+  min-height: 80vh;
+  /* margin: 0; */
 }
 
 .nav-header{
@@ -23,6 +26,20 @@
   max-width: 500px;
 }
 
+.page-section{
+  padding-bottom: 60px; /* Height of the footer */
+}
 .search-textarea {
   resize: none;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px; /* Height of the footer */
+  width: 100%;
+  max-width: 700px;
+  line-height: 60px;
+  text-align: center;
 }

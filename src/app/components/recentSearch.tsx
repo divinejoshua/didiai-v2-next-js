@@ -3,7 +3,7 @@ import rightIcon from "../assets/icons/right-icon.svg"
 import Image from 'next/image'
 
 
-export default function RecentSearch() {
+export default function RecentSearchComponent() {
   return (
     <div className='mt-5 text-sm'>
        <p className='text-gray-500'>Recent search thread</p>
