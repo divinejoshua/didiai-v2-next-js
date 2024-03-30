@@ -9,7 +9,7 @@ export default function HeaderComponent() {
   return (
     <header>
         {/* Navbar */}
-        <nav className="nav-header font-bold pr-30">
+        <nav className="nav-header font-bold">
             <div className='pb-4'>
                 <Link href={"/"}>
                     <div className='flex float-left'>
@@ -36,7 +36,7 @@ export default function HeaderComponent() {
                 </a>
                 {/* Link to codebase  */}
                 <a href='https://github.com/divinejoshua/didiai-v2-next-js' rel="noreferrer" target="_blank" >
-                    <span className='float-right mr-4'>
+                    <span className='float-right'>
                         <Image
                             src={githubIcon}
                             alt='Didi AI search'
