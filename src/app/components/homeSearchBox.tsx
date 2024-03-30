@@ -14,7 +14,8 @@ export default function HomeSearchBoxComponent() {
     const [query, setquery] = useState<string>("")
 
     // Handle form submission
-    const handleSubmit = async () => {
+    const handleSubmit = async (event : any) => {
+        event.preventDefault();
         router.push(`/search?query=${query}`)
     }
 
@@ -30,8 +31,8 @@ export default function HomeSearchBoxComponent() {
                 focus:border-100
                 transition duration-0 hover:duration-150 search-textarea mt-5' rows={3} autoFocus
                 onKeyDown={(event : any)=>{
-                    if (event.keyCode === 13) {
-                        handleSubmit()
+                    if (event.keyCode === 13 && !event.shiftKey) {
+                        handleSubmit(event)
                      }
                 }}
                 placeholder={`Search the internet...`}>
