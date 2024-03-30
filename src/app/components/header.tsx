@@ -36,7 +36,7 @@ export default function HeaderComponent() {
                 </a>
                 {/* Link to codebase  */}
                 <a href='https://github.com/divinejoshua/didiai-v2-next-js' rel="noreferrer" target="_blank" >
-                    <span className='float-right'>
+                    <span className='float-right mr-3'>
                         <Image
                             src={githubIcon}
                             alt='Didi AI search'

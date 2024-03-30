@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function SearchPage() {
   return (
-    <main className="App mx-auto pl-5 pr-5">
+    <main className="App mx-auto">
 
     {/* Header  */}
     <HeaderComponent/>
