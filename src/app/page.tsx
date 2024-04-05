@@ -1,7 +1,7 @@
 import HeaderComponent from "./components/header";
 import RecentSearchComponent from "./components/recentSearch";
 import FooterComponent from "./components/footer";
-import HomeSearchBoxComponent from "./components/homeSearchBox";
+import SearchBoxComponent from "./components/homeSearchBox";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <p className="text-gray-500 leading-1 text-sm">Home page of the internet</p>
 
         {/* Search box  */}
-        <HomeSearchBoxComponent/>
+        <SearchBoxComponent isHomePage={true}/>
 
         {/* Recent searches */}
         <RecentSearchComponent/>
