@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-size: 14px;
+}
+
 .App{
   max-width: 700px;
   position: relative;
@@ -46,4 +50,8 @@ footer {
   width: 100%;
   max-width: 700px;
   text-align: center;
+}
+
+.answer-text{
+  letter-spacing: 0.3px;
 }

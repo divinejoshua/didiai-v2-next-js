@@ -1,7 +1,7 @@
 import HeaderComponent from "./components/header";
 import RecentSearchComponent from "./components/recentSearch";
 import FooterComponent from "./components/footer";
-import SearchBoxComponent from "./components/homeSearchBox";
+import SearchBoxComponent from "./components/searchBox";
 
 export default function Home() {
   return (
