@@ -16,7 +16,6 @@ export default function SearchBoxComponent(props : any) {
     //State
     const [query, setquery] = useState<string>("")
     
-
     // Handle form submission
     const handleSubmit = async (event : any) => {
         event.preventDefault();
@@ -90,7 +89,7 @@ export default function SearchBoxComponent(props : any) {
                         priority={true}
                     />
                     </div>
-                    <button type='submit' className="absolute bottom-1 right-1 cursor-pointer flex items-center text-sm">
+                    <button type='submit' className="absolute top-7 right-1 cursor-pointer flex items-center text-sm">
                     <Image
                         src={searchIconFill}
                         alt='Didi AI search'
